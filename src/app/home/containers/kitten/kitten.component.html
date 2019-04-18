@@ -1,0 +1,27 @@
+<div class="container">
+  <div>
+    <button
+      type="button"
+      class="btn btn-primary"
+      (click)="fetchKitten()">
+      Next kitten
+    </button>
+    <button
+      type="button"
+      class="btn btn-primary"
+      (click)="toggle()">
+      Add kitten to favourites
+    </button>
+  </div>
+  <div>
+    <img src="{{kittenPictureUrl}}" alt="Picture of a kitten" style="max-height: 400px">
+  </div>
+  <div class="text-success" *ngIf="successMessage">
+    Kitten added successfully
+  </div>
+  <app-kitten-form
+    *ngIf="toggled"
+    (submitted)="addKittenToFavourites($event)"
+    [kittenPictureUrl]="kittenPictureUrl"
+  ></app-kitten-form>
+</div>

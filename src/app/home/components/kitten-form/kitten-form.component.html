@@ -1,0 +1,34 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div>
+    <input
+      type="hidden"
+      formControlName="url"
+    />
+  </div>
+  <div>
+    <label for="name">Name</label>
+    <input
+      type="text"
+      placeholder="Enter kitten name"
+      formControlName="name"
+    />
+    <div class="text-danger" *ngIf="requiredName">
+      Name is required
+    </div>
+  </div>
+  <div>
+    <label for="race">Race</label>
+    <input
+      type="text"
+      placeholder="Enter kitten race"
+      formControlName="race"
+    />
+    <div class="text-danger" *ngIf="requiredRace">
+      Race is required
+    </div>
+  </div>
+  <button type="submit" class="btn btn-success" [disabled]="!form.valid">Submit</button>
+</form>
+
+
+

@@ -1,0 +1,16 @@
+<div class="favourites container">
+  <h3>My favourite kittens</h3>
+  <div *ngIf="!favouriteKittens.length">
+    You do not have any favourite kittens :(
+  </div>
+  <table class="table">
+    <tr *ngFor="let kitten of favouriteKittens">
+      <td><p class="">Name: {{kitten.name}}</p></td>
+      <td><p>Race: {{kitten.race}}</p></td>
+      <td><img src="{{kitten.url}}" alt="Picture of a kitten" style="max-height: 100px"></td>
+    </tr>
+  </table>
+
+
+</div>
+

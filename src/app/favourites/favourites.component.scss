@@ -1,0 +1,18 @@
+.favourite-list {
+  margin-top: 70px;
+}
+
+tr {
+  height: 150px;
+}
+
+td {
+  position: relative
+}
+
+p,img {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%)
+}
